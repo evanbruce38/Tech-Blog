@@ -1,4 +1,4 @@
-async function newFormHandler(event) {
+async function commentFormHandler(event) {
     event.preventDefault();
 
     const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
@@ -19,7 +19,7 @@ async function newFormHandler(event) {
         });
 
         if(response.ok) {
-            document.location.replace('/dashboard');
+            document.location.reload();
         } else {
             alert(response.statusText);
         }
