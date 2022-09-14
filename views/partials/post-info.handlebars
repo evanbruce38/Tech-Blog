@@ -1,0 +1,14 @@
+<div class="card m-3">
+  <div class="card-header">
+    {{title}}
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{post_content}}</p>
+      <footer class="blockquote-footer">by {{user.username}} on {{format_date created_at}}
+       | 
+       <a href="/post/{{id}}"> &nbsp;{{comments.length}} {{format_plural "comment" comments.length}}</a> </footer>
+    </blockquote>
+    <a href="/dashboard/edit/{{id}}" class="edit-link"><p>Edit Post</p></a>
+  </div>
+</div>
